@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145.15 145.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #edf2f2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #a9c238;
+      }
+
+      .cls-3 {
+        fill: #e04866;
+      }
+
+      .cls-4 {
+        fill: #f09b24;
+      }
+    </style>
+  </defs>
+  <circle class="cls-3" cx="72.58" cy="72.58" r="72.58" transform="translate(-30.06 72.58) rotate(-45)"/>
+  <g>
+    <rect class="cls-1" x="71.29" y="50.9" width="2.56" height="43.08"/>
+    <rect class="cls-1" x="36.27" y="50.9" width="2.56" height="43.08"/>
+    <rect class="cls-1" x="106.32" y="50.9" width="2.56" height="43.08"/>
+    <rect class="cls-1" x="37.55" y="71.16" width="70.06" height="2.56"/>
+    <rect class="cls-2" x="54.06" y="32.53" width="37.03" height="18.38" rx="1.39" ry="1.39"/>
+    <rect class="cls-1" x="28.36" y="32.53" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <rect class="cls-1" x="98.42" y="32.53" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <rect class="cls-1" x="28.36" y="93.98" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <rect class="cls-1" x="98.42" y="93.98" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <rect class="cls-1" x="63.39" y="93.98" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <rect class="cls-1" x="63.39" y="63.25" width="18.38" height="18.38" rx="1.95" ry="1.95"/>
+    <g>
+      <circle class="cls-4" cx="37.55" cy="72.44" r="6.38"/>
+      <path class="cls-1" d="M37.55,80.1c-4.22,0-7.66-3.44-7.66-7.66s3.44-7.66,7.66-7.66,7.66,3.44,7.66,7.66-3.44,7.66-7.66,7.66ZM37.55,67.34c-2.81,0-5.1,2.29-5.1,5.1s2.29,5.1,5.1,5.1,5.1-2.29,5.1-5.1-2.29-5.1-5.1-5.1Z"/>
+    </g>
+    <g>
+      <path class="cls-4" d="M113.98,72.44c0,3.52-2.86,6.38-6.38,6.38s-6.38-2.86-6.38-6.38,2.86-6.38,6.38-6.38,6.38,2.86,6.38,6.38Z"/>
+      <path class="cls-1" d="M107.6,80.1c-4.22,0-7.66-3.44-7.66-7.66s3.44-7.66,7.66-7.66,7.66,3.44,7.66,7.66-3.44,7.66-7.66,7.66ZM107.6,67.34c-2.81,0-5.1,2.29-5.1,5.1s2.29,5.1,5.1,5.1,5.1-2.29,5.1-5.1-2.29-5.1-5.1-5.1Z"/>
+    </g>
+    <g>
+      <rect class="cls-1" x="60.87" y="36.48" width="23.36" height="2.14"/>
+      <rect class="cls-1" x="60.87" y="44.91" width="23.36" height="2.14"/>
+      <rect class="cls-1" x="60.87" y="40.65" width="16.47" height="2.14"/>
+    </g>
+  </g>
+</svg>
