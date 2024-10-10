@@ -4,37 +4,41 @@ Template Name:work
 */
 get_header(); 
 ?>
-
-<section class="hero-section jarallax py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-6 my-5 py-5" data-aos="fade-up">
-        <div class="section-header mt-5 text-white text-center">
-          <div class="breadcrumbs"> <span class="item"><a href="index.html">HOME /</a></span> <span class="item">WORKS</span> </div>
-          <h1 class="display-1 fw-bold">WORKS</h1>
-        </div>
-        <!--section-header--> 
-      </div>
-    </div>
-  </div>
-</section>
-<section class="py-2 my-2 py-md-5 my-md-5">
-  <div class="container">
-    <div class="row">
-      <div class="inner-content">
-        <div class="service-content">
-          <div class="section-header text-center mb-5 works-header">
-            <h2 class="section-title" data-aos="fade-up">実績紹介</h2>
-            <p class="section-lead" data-aos="fade-up"></p>
+      <!--header-wrap-->
+    </header>
+    <section class="hero-section jarallax py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 my-5 py-5" data-aos="fade-up">
+            <div class="section-header mt-5 text-white text-center">
+              <div class="breadcrumbs">
+                <span class="item"><a href="index.html">HOME /</a></span>
+                <span class="item">WORKS</span>
+              </div>
+              <h1 class="display-1 fw-bold">WORKS</h1>
+            </div>
+            <!--section-header-->
           </div>
         </div>
       </div>
-      <!--inner-content--> 
-    </div>
-  </div>
-</section>
-<section class="works"> 
-  <!-- Nav tabs -->
+    </section>
+    <section class="py-md-5">
+      <div class="container">
+        <div class="row">
+          <div class="inner-content">
+            <div class="service-content">
+              <div class="section-header text-center works-header">
+                <h2 class="section-title" data-aos="fade-up">実績紹介</h2>
+                <p class="section-lead" data-aos="fade-up"></p>
+              </div>
+            </div>
+          </div>
+          <!--inner-content-->
+        </div>
+      </div>
+    </section>
+    <section class="works">
+      <!-- Nav tabs -->
 
    <?php 
    $c = $_GET['c'];
@@ -101,32 +105,43 @@ get_header();
       <?php } ?>
   </li>
 </ul>
-  <!-- Tab panes -->
-  <div class="post-grid tab-content">
+<!-- Nav tabsここまで -->
 
-    <!-- PR Category -->
+<!-- Tab panes -->
+      <div class="post-grid tab-content">
+
+        <!-- PR Category -->
     <div class="tab-pane<?php echo $practive; ?>" id="nav-pr" role="tabpanel" aria-labelledby="nav-pr-tab">
+    <?php if ($pr_query->have_posts()) : while ($pr_query->have_posts()) : $pr_query->the_post(); ?>
     <article class="post-item" data-aos="fade-up">
       <div class="container">
-      <?php
-      
-      if ($pr_query->have_posts()) : while ($pr_query->have_posts()) : $pr_query->the_post(); ?>
         <div class="row justify-content-center align-items-center g-md-5 works-row">
-          <div class="col-md-5">
+          <div class="col-md-4 works-image">
             <div class="post-media"> <a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="post" class="img-fluid"></a> </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8 works-text">
             <div class="post-content">
-              <time><?php echo get_the_date('Y-m-d'); ?></time>
-              <ul class="post-categories">
-                  <li><?php echo get_the_category_list(', '); ?></li>
-              </ul>
-              <p><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></p>
+            <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h2>
+            <?php
+               $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                 echo '<ul class="post-subcategories">';
+                foreach ( $categories as $category ) {
+                // parentが0でない場合は子カテゴリー
+                if ( $category->parent != 0 ) {
+                 echo '<li class="post-subcategory"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+                }
+              }
+              echo '</ul>';
+            }
+            ?>
             </div>
           </div>
         </div>
-        <?php endwhile; else : ?>
-        <p>記事はありません。</p>
+    </div> <!-- container -->
+    </article>
+    <?php endwhile; else : ?>
+        <p style="text-align: center;">記事はありません。</p>
       <?php endif; wp_reset_postdata(); ?>
       <!-- ページネーション -->
       <div class="nav-links">
@@ -141,33 +156,40 @@ get_header();
       ));
       ?>
     </div>
-    </div> <!-- container -->
-    </article>
     </div> <!-- tab-pane -->
 
     <!-- CASTING Category -->
     <div class="tab-pane<?php echo $castingactive; ?>" id="nav-casting" role="tabpanel" aria-labelledby="nav-casting-tab">
+    <?php if ($casting_query->have_posts()) : while ($casting_query->have_posts()) : $casting_query->the_post(); ?>
     <article class="post-item" data-aos="fade-up">
       <div class="container">
-      <?php
-      
-      if ($casting_query->have_posts()) : while ($casting_query->have_posts()) : $casting_query->the_post(); ?>
         <div class="row justify-content-center align-items-center g-md-5 works-row">
-          <div class="col-md-5">
+          <div class="col-md-4 works-image">
             <div class="post-media"> <a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="post" class="img-fluid"></a> </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8 works-text">
             <div class="post-content">
-              <time><?php echo get_the_date('Y-m-d'); ?></time>
-              <ul class="post-categories">
-                  <li><?php echo get_the_category_list(', '); ?></li>
-              </ul>
-              <p><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></p>
+            <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h2>
+            <?php
+               $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                 echo '<ul class="post-subcategories">';
+                foreach ( $categories as $category ) {
+                // parentが0でない場合は子カテゴリー
+                if ( $category->parent != 0 ) {
+                 echo '<li class="post-subcategory"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+                }
+              }
+              echo '</ul>';
+            }
+            ?>
             </div>
           </div>
         </div>
-        <?php endwhile; else : ?>
-        <p>記事はありません。</p>
+      </div> <!-- container -->
+    </article>
+    <?php endwhile; else : ?>
+        <p style="text-align: center;">記事はありません。</p>
       <?php endif; wp_reset_postdata(); ?>
       <!-- ページネーション -->
       <div class="nav-links">
@@ -182,33 +204,40 @@ get_header();
       ));
       ?>
     </div>
-      </div> <!-- container -->
-    </article>
     </div> <!-- tab-pane -->
 
     <!-- OTHER Category -->
     <div class="tab-pane<?php echo $otheractive; ?>" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
+    <?php if ($other_query->have_posts()) : while ($other_query->have_posts()) : $other_query->the_post(); ?>
     <article class="post-item" data-aos="fade-up">
       <div class="container">
-      <?php
-      
-      if ($other_query->have_posts()) : while ($other_query->have_posts()) : $other_query->the_post(); ?>
         <div class="row justify-content-center align-items-center g-md-5 works-row">
-          <div class="col-md-5">
+          <div class="col-md-4 works-image">
             <div class="post-media"> <a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php the_post_thumbnail_url(); ?>" alt="post" class="img-fluid"></a> </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8 works-text">
             <div class="post-content">
-              <time><?php echo get_the_date('Y-m-d'); ?></time>
-              <ul class="post-categories">
-                  <li><?php echo get_the_category_list(', '); ?></li>
-              </ul>
-              <p><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></p>
+            <h2><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h2>
+            <?php
+               $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                 echo '<ul class="post-subcategories">';
+                foreach ( $categories as $category ) {
+                // parentが0でない場合は子カテゴリー
+                if ( $category->parent != 0 ) {
+                 echo '<li class="post-subcategory"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a></li>';
+                }
+              }
+              echo '</ul>';
+            }
+            ?>
             </div>
           </div>
         </div>
-        <?php endwhile; else : ?>
-        <p>記事はありません。</p>
+      </div> <!-- container -->
+    </article>
+    <?php endwhile; else : ?>
+        <p style="text-align: center;">記事はありません。</p>
       <?php endif; wp_reset_postdata(); ?>
       <!-- ページネーション -->
       <div class="nav-links">
@@ -223,11 +252,16 @@ get_header();
       ));
       ?>
       </div>
-      </div> <!-- container -->
-    </article>
     </div> <!-- tab-pane -->
 
-  </div>
-</section>
 
-<?php get_footer(); ?>
+
+
+
+
+<!-- ここからPHP　ここまで -->
+      </div>
+      <!-- Tab panes ここまで-->
+    </section>
+  
+    <?php get_footer(); ?>

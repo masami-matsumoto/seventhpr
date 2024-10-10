@@ -31,7 +31,7 @@
 
 	  //初期状態をセット
 	  gsap.set(
-		[jsBubble, jsText, jsLeadText],
+		[jsDot, jsBubble, jsText, jsLeadText],
 		//アニメーションさせない静止状態を指定する
 		{
 		  opacity: 0,

@@ -1371,6 +1371,9 @@ textarea {
 .single .post-grid .container {
   margin-bottom: 40px;
 }
+.profile-subtitle {
+  padding: 5px 0;
+}
 }
 /*----- Footer Section
 --------------------------------------------------------------*/
@@ -1558,6 +1561,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #FF0000;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color2 {
   display: block;
@@ -1565,6 +1569,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #FFA500;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color3 {
   display: block;
@@ -1572,6 +1577,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #FFFF00;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color4 {
   display: block;
@@ -1579,6 +1585,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #008000;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color5 {
   display: block;
@@ -1586,6 +1593,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #00FFFF;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color6 {
   display: block;
@@ -1593,6 +1601,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #0000FF;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color7 {
   display: block;
@@ -1600,6 +1609,7 @@ textarea {
   height: 30px;
   border-radius: 50%;
   background-color: #800080;
+  opacity: 0;
 }
 .c-loader-dot > .dot_color1 + .dot_color2 {
   margin-left: 2rem;
@@ -1734,7 +1744,7 @@ works pagebotton
 .nav-links a,
 .nav-links span {
   display: inline-block;
-  margin: 0 5px;
+  margin: 5px;
   padding: 8px 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -1771,7 +1781,7 @@ single pagebotton
 .post-navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .nav-previous a, .nav-next a {
@@ -1841,12 +1851,4 @@ single pagebotton
   .page-404 {
     padding-top: 50%; /* バナー画像を画面の90%の幅に縮小 */
   }
-}
-
-/* CSSで初期状態を設定する場合 */
-.js-loader-bg {
-  transform: translateY(-100%); /* 初期位置を画面外に設定 */
-}
-.js-header {
-  transform: translateY(-100%); /* 初期位置を画面外に設定 */
 }

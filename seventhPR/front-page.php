@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="img-bana"> <a href="https://seventhpr.tokyo/2309/"><img src="<?php echo esc_url(get_theme_file_uri('/images/bana_1.JPG')); ?>" alt=""></a> </div>
-          <div class="btn-wrap"> <a href="/about/" class="btn-accent hvr-sweep-to-right">Read More</a> </div>
+          <div class="btn-wrap"> <a href="/company/" class="btn-accent hvr-sweep-to-right">Read More</a> </div>
         </div>
       </div>
     </div>

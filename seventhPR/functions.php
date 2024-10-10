@@ -9,6 +9,7 @@ wp_enqueue_style('aos', 'https://unpkg.com/aos@next/dist/aos.css', array(), null
 // 自作CSSを追加
 wp_enqueue_style('vendor.css', get_theme_file_uri('/css/vendor.css'));
 wp_enqueue_style('style.css', get_theme_file_uri('/css/style.css'));
+wp_enqueue_style('post.css', get_theme_file_uri('/css/post.css'));
 
 //javascript
 // jQueryの読み込み
@@ -112,7 +113,7 @@ function add_meta_tags() {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
     <meta name="author" content="lifeperformance">
     <meta name="keywords" content="株式会社セブンスPR">
     <meta name="description" content="<?php bloginfo('description'); ?>">

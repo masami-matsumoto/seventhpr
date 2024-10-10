@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name:about
+Template Name:company
 */
 get_header(); 
 ?>
@@ -121,7 +121,7 @@ get_header();
         </div>
         <div class="profile-container">
           <div class="profile-item" data-aos="fade-up">
-            <h3><span class="profile-title">本間　弘亀</span><span class="profile-subtitle">元ジャニーズ事務所マネージャー / 元パール取締役</span></h3>
+            <h3><span class="profile-title">本間　弘亀</span><span class="profile-subtitle br-sp">元ジャニーズ事務所マネージャー / 元パール取締役</span></h3>
             <div class="profile-body">
               <div class="profile-inner">
                 <p>1999年にジャニーズ事務所入社。<br>
@@ -138,7 +138,7 @@ get_header();
             </div>
           </div>
           <div class="profile-item" data-aos="fade-up">
-            <h3><span class="profile-title">川岸　一超 </span><span class="profile-subtitle">元ケイダッシュマネージャー ＆ 広報部PR業務専任</span></h3>
+            <h3><span class="profile-title">川岸　一超 </span><span class="profile-subtitle br-sp">元ケイダッシュマネージャー ＆ 広報部PR業務専任</span></h3>
             <div class="profile-body">
               <div class="profile-inner">
                 <p>株式会社ケイダッシュに入社。<br>

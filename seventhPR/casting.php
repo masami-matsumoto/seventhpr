@@ -96,7 +96,7 @@ get_header();
         <p>記事はありません。</p>
       <?php endif; wp_reset_postdata(); ?>
           </div>
-          <div class="btn-wrap" style="text-align:center"> <a href="/works/" class="btn-accent hvr-sweep-to-right">Read More</a> </div>
+          <div class="btn-wrap" style="text-align:center"> <a href="/works/?c=casting" class="btn-accent hvr-sweep-to-right">Read More</a> </div>
         </div>
       </div>
     </div>
